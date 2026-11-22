@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>GenAI Academy · Virtual School</title>
+<link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+<canvas id="scene"></canvas>
+
+<div id="hud">
+  <div id="crosshair"></div>
+  <div id="prompt" class="hidden"></div>
+  <div id="resume" class="hidden">Click the scene to resume walking</div>
+  <div id="loc">📍 <span id="locName">Schoolyard</span></div>
+  <div id="progress">Boards studied <b id="progN">0</b>/24</div>
+  <div id="help">
+    <b>WASD</b> move · <b>Mouse</b> look · <b>Shift</b> run · <b>E / Click</b> open board ·
+    <b>M</b> exam hub &amp; map · <b>Esc</b> release mouse
+  </div>
+</div>
+
+<div id="intro">
+  <div class="card">
+    <h1>GenAI Academy</h1>
+    <p class="sub">A walkable 3D school for the Generative AI syllabus. 6 classrooms · 24 interactive boards · every object built from pure Three.js geometry.</p>
+    <ul>
+      <li>Walk in from the gate, enter the corridor, step into any classroom.</li>
+      <li>Aim at a chalkboard and press <kbd>E</kbd> (or click) to open it: <b>Learn → Practice → Exam</b>.</li>
+      <li>Press <kbd>M</kbd> anywhere for the Exam Hub: map, progress, 100-mark mock paper.</li>
+    </ul>
+    <button id="startBtn">Enter the school</button>
+    <p class="tiny" id="keyStatus"></p>
+  </div>
+</div>
+
+<div id="overlay" class="hidden"></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
